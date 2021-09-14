@@ -11,11 +11,9 @@ library(readxl)
 library (tidyverse)
 
   reliability_data <- read_excel("reliability_data.xlsx") %>%
-  mutate (diff = Pre - Po
+  mutate (diff = Pre - Post) %>%
     
   print ()
-  
-  
 
 
 ```
