@@ -1,0 +1,22 @@
+---
+title: "Rapport_1_Gr3"
+author: "Tonje Fredriksen"
+date: "9/14/2021"
+output: html_document
+---
+
+```{r}
+
+library(readxl)
+library (tidyverse)
+
+  reliability_data <- read_excel("reliability_data.xlsx") %>%
+  mutate (diff = Pre - Po
+    
+  print ()
+  
+  
+
+
+```
+
