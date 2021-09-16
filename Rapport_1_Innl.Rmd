@@ -31,7 +31,6 @@ library (kableExtra)
 
   reliability_data <- read_excel("reliability_data.xlsx") %>%
   mutate (diff = Pre - Post) %>%
-<<<<<<< HEAD
   
   summarise (s = round(sd (diff), 2),
     te = round(s / sqrt (2), 2), 
@@ -39,13 +38,10 @@ library (kableExtra)
     cv = round((te/m) * 100, 2))
   
   cv <- round(reliability_data$cv, 2)
-=======
-    
-  print ()
->>>>>>> b78a3c10f857e7b1f7faf850a0d70b7a67e73cb9
 
 
 ```
+
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 reliability_data %>% 
   kable(format="html",  
