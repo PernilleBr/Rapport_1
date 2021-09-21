@@ -7,22 +7,21 @@ output: html_document
 editor_options: 
   chunk_output_type: console
 ---
-<!--  I added a referece file (references.bib) with references collected from https://www.bioinformatics.org/texmed/. -->
-<!-- See comments below, suggested changes are made and may be checked in the pull request. -->
+
 ## Introduction 
-When testing in exercise physiology you need tests that are reliable. This means that you need to produce the same results each time you are doing a test.
+When testing in exercise physiology you need tests that are reliable. This means that you need to produce the same results each time you are doing a test. 
 <!-- Daniel: I'm not sure about this definition, could you make this clearer? --> To be able to do so you need to standardize the test protocol and make sure that the participants have done the same things before pre and post testing. The elimination of learning progression, fatigue etc. are therefore important to be able to produce reliable results.<!-- Daniel: Again, sometimes you want to measure fatigue as a frop in performance, and then the test have to catch this. Your definition of reliability sounds like you cannot test if participants are not prepared in the same way. Can you better distinguish between reliability of the test/measurement and what you are trying to measure? --> To get clean results we often look at the individual variation from pre to post. A good measure of reliability is the typical error as a percentage of the mean. This means the average variation within individuals from between tests [@hopkins].<!-- Does this change sound ok to you? --> 
 
 ## Method 
 Nine healthy sports science students participated in this reliability study. They performed a one repetition-maximum (1RM) strength test in leg press on two occasions. Trials were performed one week apart at the same time of the day. Activity the day before and energy intake at test days were individually standardized. 1RM leg press tests were performed with the Keiser Air 300 leg press machine. To establish reliability of the measure, participants had the same test leader. Also the number and gender of observers in the room was the same for both test occasions [@halperin]. 
 
 #### Preperation
-Before the 1RM test, the Keiser Air 300 machine was individually customized. Participants performed the test without shoes with legs on separate force plates<!-- Is this correct? --> and 90&#176; in the knee joint. Seat length and leg position on the footplate were recorded for each individual to ensure similar conditions in both tests. 
+Before the 1RM test, the Keiser Air 300 machine was individually customized. Participants performed the test without shoes with legs on separate force plates and 90&#176; in the knee joint. Seat length and leg position on the footplate were recorded for each individual to ensure similar conditions in both tests. 
 
-Three warm-up sets were performed before the 1RM test consisting of 8, 6 and 4 repetitions with increasing resistance and one minute rest in between. The resistance of the warm-up sets were recorded.<!-- Was the resistance repeated between tests? --> 
+Three warm-up sets were performed before the 1RM test consisting of 8, 6 and 4 repetitions with increasing resistance and one minute rest in between. The resistance of the warm-up sets were recorded, to be repeated in post test. 
 
 #### One repetition maximum test (1RM)
-After warm-up sets, participants rested for one minute followed by a maximum of five trials to reach 1RM. In between each trial they rested for three minutes. The resistance was determined by both the participant and test leader.<!-- How was this possible? --> Resistance of each trial was recorded.<!-- Was this the results? --> 
+After warm-up sets, participants rested for one minute followed by a maximum of five trials to reach 1RM. In between each trial they rested for three minutes. The resistance gradually increased and was of each trial was recorded. The maximum weight the participants manage to perform with correct technique was noted as 1RM. 
 
 
 ## Results and discussion
