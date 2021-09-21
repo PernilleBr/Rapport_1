@@ -2,22 +2,27 @@
 title: "Reliability report in one repetition maximum test"
 author: "Aleksander, Vemund, Pernille and Tonje"
 date: "2021"
+bibliography: references.bib
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
-
+<!--  I added a referece file (references.bib) with references collected from https://www.bioinformatics.org/texmed/. -->
+<!-- See comments below, suggested changes are made and may be checked in the pull request. -->
 ## Introduction 
-When testing in exercise physiology you need tests that are reliable. This means that you need to produce the same results each time you are doing a test. To be able to do so you need to standardize the test protocol and make sure that the participants have done the same things before pre and post testing. The elimination of learning progression, fatigue etc are therefore important to be able to produce reliable results. To get clean results we often look at the subject variation from pre to post.A good measure of reliability is the typical error, a percentage of the mean. This means the mean variation for the individuals standard deviation from pre to post test (Hopkins, 2000). 
+When testing in exercise physiology you need tests that are reliable. This means that you need to produce the same results each time you are doing a test.
+<!-- Daniel: I'm not sure about this definition, could you make this clearer? --> To be able to do so you need to standardize the test protocol and make sure that the participants have done the same things before pre and post testing. The elimination of learning progression, fatigue etc. are therefore important to be able to produce reliable results.<!-- Daniel: Again, sometimes you want to measure fatigue as a frop in performance, and then the test have to catch this. Your definition of reliability sounds like you cannot test if participants are not prepared in the same way. Can you better distinguish between reliability of the test/measurement and what you are trying to measure? --> To get clean results we often look at the individual variation from pre to post. A good measure of reliability is the typical error as a percentage of the mean. This means the average variation within individuals from between tests [@hopkins].<!-- Does this change sound ok to you? --> 
 
 ## Method 
-Nine healthy sports students participated in the reliability test. They performed a one repetition maximum strength test in leg press two times. These trials were performed one week apart, the same time of the day. Activity the day before and energy intake at test day were individually standardized. 1RM leg press test was performed with the Keiser Air 300 leg press machine. To establish reliability from pre to post test participants had the same test leader. Also the amount and gender of observers in the room was the same for both test days (Halperin et al., 2015). 
+Nine healthy sports science students participated in this reliability study. They performed a one repetition-maximum (1RM) strength test in leg press on two occasions. Trials were performed one week apart at the same time of the day. Activity the day before and energy intake at test days were individually standardized. 1RM leg press tests were performed with the Keiser Air 300 leg press machine. To establish reliability of the measure, participants had the same test leader. Also the number and gender of observers in the room was the same for both test occasions [@halperin]. 
 
 #### Preperation
-Before 1RM test the Keiser Air 300 machine were individually customized. The participants performed the test without shoes with separate leg plates and 90 degrees in the knee joint. Seat length and leg position on the footplate were noted for each individual to ensure reproducibility from pre to post test. 
+Before the 1RM test, the Keiser Air 300 machine was individually customized. Participants performed the test without shoes with legs on separate force plates<!-- Is this correct? --> and 90&#176; in the knee joint. Seat length and leg position on the footplate were recorded for each individual to ensure similar conditions in both tests. 
 
-Three warm-up sets were performed before the 1RM test. It consisted of 8, 6 and 4 repetitions with increasing resistance and one minute rest in between. The resistance of the warm-up sets were noted. 
+Three warm-up sets were performed before the 1RM test consisting of 8, 6 and 4 repetitions with increasing resistance and one minute rest in between. The resistance of the warm-up sets were recorded.<!-- Was the resistance repeated between tests? --> 
 
 #### One repetition maximum test (1RM)
-After the warm-up sets the participants rested for one minute. The participants had a maximum of five trials to reach 1RM. In between each trial they rested for three minutes. The resistance was determined by both the participant and test leader. Resistance of each trial was noted. 
+After warm-up sets, participants rested for one minute followed by a maximum of five trials to reach 1RM. In between each trial they rested for three minutes. The resistance was determined by both the participant and test leader.<!-- How was this possible? --> Resistance of each trial was recorded.<!-- Was this the results? --> 
 
 
 ## Results and discussion
@@ -45,17 +50,15 @@ library (kableExtra)
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
 reliability_data %>% 
   kable(format="html",  
-        col.names = c("SD", "TE", "Mean", "CV"),
-        caption = "Table 1. Descriptive statistics from 1RM pre and post test (n = 9).") %>%
-        add_footnote(label= "SD = Standard deviation, TE = Typical error, CV = Coeffisient of variation",
+        col.names = c("SD", "TE", "Mean (kg)", "CV (%)"),
+        caption = "Table 1. Descriptive statistics from repeated 1RM tests (n = 9).") %>%
+        add_footnote(label= "SD = Standard deviation, TE = Typical error, CV = Coefficient of variation",
                      notation = "none") %>%
   kable_styling(latex_options = "striped") 
 ```
 
-The typical percentage error (CV) of the test was `r cv`%. This means that it is 2,14 % variation between each individual from pre to post test. This is a small variation and the test seems to be reliable. It may be explained by elimination of measurement errors because of  standardized preparation and test procedures. The small variation that was found in this reliability test may be explained by day-to-day variations which can be physiological and psychological factors, for example motivation and fatigue (Halperin et al., 2015) 
+The typical percentage error (CV) of the test was `r cv`%. This means that it is expected that individuals typically will vary `r cv`% from test to test during similar conditions.<!-- Is this correct? --> This is a small variation and the test seems to be reliable.<!-- Can you compare to something, can you find reliability measures of similar tests in the literature e.g. Tanner? --> It may be explained by elimination of measurement errors because of standardized preparation and test procedures. The small variation that was found in this reliability test may be explained by day-to-day variations which can be physiological and psychological factors, for example motivation and fatigue [@halperin]. 
 
 
 ## References 
-Hopkins W. G. (2000). Measures of reliability in sports medicine and science. Sports medicine (Auckland, N.Z.), 30(1), 1–15. https://doi.org/10.2165/00007256-200030010-00001
 
-Halperin, I., Pyne, D. B., & Martin, D. T. (2015). Threats to internal validity in exercise science: a review of overlooked confounding variables. International journal of sports physiology and performance, 10(7), 823–829. https://doi.org/10.1123/ijspp.2014-0566 
